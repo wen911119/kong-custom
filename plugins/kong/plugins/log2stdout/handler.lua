@@ -93,7 +93,7 @@ local function log(premature, conf, message)
   if premature then
     return
   end
-  print(message)
+  print(cjson.encode(message))
   -- if message.response.status >= 500 then
   --   return decide_severity(conf, conf.server_errors_severity, message)
   -- elseif message.response.status >= 400 then
